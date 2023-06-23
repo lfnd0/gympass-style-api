@@ -1,12 +1,14 @@
-import { app } from "./app";
-import { env } from "./env";
+import { app } from './app'
+import { env } from './env'
 
 const port = env.PORT
 const host = '0.0.0.0'
 
-app.listen({
-  host,
-  port,
-}).then(() => {
-  console.log(`🚀️ HTTP server running at: http://localhost:${port}`)
-})
+app
+  .listen({
+    host,
+    port,
+  })
+  .then(() => {
+    console.log(`🚀️ HTTP server running at: http://localhost:${port}`)
+  })
