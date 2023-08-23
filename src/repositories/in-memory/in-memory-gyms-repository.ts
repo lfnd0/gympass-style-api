@@ -6,8 +6,8 @@ import { getDistanceBetweenCoordinate } from '@/utils/get-distance-between-coord
 export class InMemoryGymsRepository implements GymsRepository {
   public items: Gym[] = []
 
-  async findById(gymId: string) {
-    const gym = this.items.find((item) => item.id === gymId)
+  async findById(id: string) {
+    const gym = this.items.find((item) => item.id === id)
 
     if (!gym) {
       return null
