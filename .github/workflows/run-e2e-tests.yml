@@ -24,5 +24,5 @@ jobs:
       - run: npm ci
       - run: npm run test:e2e
         env:
-          JWT_SECRET: eb0f1e6a91303963c08bb5baabfa3645 # ignite-tests-e2e
+          JWT_SECRET: 0bb90ea4898497c8e01b067d3e0e8f89 # ignite-e2e-tests
           DATABASE_URL: "postgresql://docker:docker@localhost:5432/gympass?schema=public"
