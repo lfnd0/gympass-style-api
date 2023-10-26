@@ -4,7 +4,7 @@ import request from 'supertest'
 import { createAndAuthenticateUser } from '@/utils/test/create-and-authenticate-user'
 import { prisma } from '@/lib/prisma'
 
-describe('Validate Check-in (2e2)', () => {
+describe('Validate Check-in (e2e)', () => {
   beforeAll(async () => {
     await app.ready()
   })
