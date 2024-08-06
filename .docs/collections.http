@@ -1,0 +1,29 @@
+@baseURL = http://localhost:3000
+@contentType = application/json
+@token = eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyb2xlIjoiTUVNQkVSIiwic3ViIjoiOWFiYjJlZDItMDQyZS00Mzc5LWFmYmItNmU5MWY4YzcxMDc0IiwiaWF0IjoxNzIyOTA2MjA1LCJleHAiOjE3MjI5MDY4MDV9.w-np3UCRC39CeVEh1ty8dabhV3XseGnJmkfbGgUx99w
+
+###
+GET {{baseURL}}
+
+###
+POST {{baseURL}}/users
+Content-Type: {{contentType}}
+
+{
+  "name": "Lfnd0",
+  "email": "lfnd0@mail.com",
+  "password": "PUs=TfZyM#"
+}
+
+###
+POST {{baseURL}}/sessions
+Content-Type: {{contentType}}
+
+{
+  "email": "lfnd0@mail.com",
+  "password": "PUs=TfZyM#"
+}
+
+###
+GET {{baseURL}}/me
+Authorization: Bearer {{token}}
